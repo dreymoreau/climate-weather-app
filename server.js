@@ -38,6 +38,8 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
+app.use(flash())
+
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
 })    
