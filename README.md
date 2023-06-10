@@ -1,12 +1,12 @@
-Weather Wizard
+# Weather Wizard
 One Paragraph of the project description
 
-Initially appeared on gist. But the page cannot open anymore so that is why I have moved it here.
+# Initially appeared on gist. But the page cannot open anymore so that is why I have moved it here.
 
-Getting Started
+# Getting Started
 These instructions will give you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on deploying the project on a live system.
 
-Prerequisites
+# Prerequisites
 Requirements for the software and other tools to build, test and push
 
 Example 1
@@ -22,10 +22,10 @@ And repeat
 until finished
 End with an example of getting some data out of the system or using it for a little demo
 
-Running the tests
+# Running the tests
 Explain how to run the automated tests for this system
 
-Sample Tests
+# Sample Tests
 Explain what these tests test and why
 
 Give an example
@@ -43,14 +43,9 @@ Contributing
 Versioning
 We use Semantic Versioning for versioning. For the versions available, see the tags on this repository.
 
-Authors
-Billie Thompson - Provided README Template - PurpleBooth
-See also the list of contributors who participated in this project.
+# Authors
 
-License
+# License
 This project is licensed under the CC0 1.0 Universal Creative Commons License - see the LICENSE.md file for details
 
-Acknowledgments
-Hat tip to anyone whose code is used
-Inspiration
-etc
+# Acknowledgments
