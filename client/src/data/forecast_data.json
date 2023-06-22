@@ -1,0 +1,51 @@
+[
+    {
+        "lowTemp": 50,
+        "highTemp": 78,
+        "day": "Sunday",
+        "weatherForecast": "rainy",
+        "backgroundUrl": "https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+    },
+    {
+        "lowTemp": 47,
+        "highTemp": 80,
+        "day": "Monday",
+        "weatherForecast": "rainy",
+        "backgroundUrl": "https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+    },
+    {
+        "lowTemp": 46,
+        "highTemp": 67,
+        "day": "Tuesday",
+        "weatherForecast": "rainy",
+        "backgroundUrl": "https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+    },
+    {
+        "lowTemp": 66,
+        "highTemp": 72,
+        "day": "Wednesday",
+        "weatherForecast": "sunny",
+        "backgroundUrl": "https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+    },
+    {
+        "lowTemp": 77,
+        "highTemp": 88,
+        "day": "Thursday",
+        "weatherForecast": "rainy",
+        "backgroundUrl": "https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+    },
+    {
+        "lowTemp": 50,
+        "highTemp": 78,
+        "day": "Friday",
+        "weatherForecast": "rainy",
+        "backgroundUrl": "https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+    },
+    {
+        "lowTemp": 61,
+        "highTemp": 79,
+        "day": "Saturday",
+        "weatherForecast": "cloudy",
+        "backgroundUrl": "https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+    }
+]
