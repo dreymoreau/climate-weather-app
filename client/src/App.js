@@ -2,7 +2,6 @@ import './App.css';
 import Header from './components/Header'
 import Today from './components/Today'
 import NextDays from './components/NextDays'
-import MoreButton from './components/MoreButton'
 import Footer from './components/Footer'
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
       <Header />
       <Today />
       <NextDays />
-      <MoreButton />
       <Footer />
     </div>
   );
