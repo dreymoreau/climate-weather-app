@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "rainy": "url('https://media.discordapp.net/attachments/1113169937222074480/1121822922122735716/rainy.jpg?width=328&height=584')",
+        "rainy": "url('https://images.unsplash.com/photo-1527766833261-b09c3163a791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')",
         "foggy": "url('https://media.discordapp.net/attachments/1113169937222074480/1121822922726723624/foggy.jpg?width=799&height=584')",
         "sunny": "url('https://media.discordapp.net/attachments/1113169937222074480/1121822923364249600/sunny.jpg?width=810&height=540')",
         "stormy": "url('https://media.discordapp.net/attachments/1113169937222074480/1121822924077285417/thunderstorm.jpg?width=810&height=540')",
