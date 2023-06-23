@@ -10,23 +10,15 @@ const NextDay = (props) => {
   let [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <div>
-        <h5>Next Day</h5>
-        <div className="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="" alt="Weather status" /></figure>
-          <div className="card-body">
-            <h2 className="card-title">{day}</h2>
-            <div>
-              <p>Low: {lowTemp}</p>
-              <p>High: {highTemp}</p>
-              <p>weatherStatus: {weatherForecast}</p>
-              <p className="overflow-hidden">backgroundUrl: {backgroundUrl}</p>
-            </div>
-            <div className="card-actions justify-end">
-              <button className="btn btn-sm">Expand for more</button>
-            </div>
-          </div>
-        </div>
+    <div class="collapse">
+      <input type="radio" name="forecast" checked="checked" />
+      <div className="collapse-title text-xl px-0">
+        <p>Low: {lowTemp}</p>
+        <p>High: {highTemp}</p>
+      </div>
+      <div className="collapse-content">
+        <p>weatherStatus: {weatherForecast}</p>
+      </div>
     </div>
   )
 }
