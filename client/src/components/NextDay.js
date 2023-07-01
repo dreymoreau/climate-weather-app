@@ -11,10 +11,6 @@ import {
   PiSunDuotone,
 } from 'react-icons/pi'
 
-let data = {
-  'forecastType': 0
-}
-
 class ForecastType {
   constructor(text, component) {
     this.text = text
@@ -60,20 +56,19 @@ const NextDay = (props) => {
   let [weathercode, setWeathercode] = useState(props.weathercode)
   let [degreeUnit, setDegreeUnit] = useState(props.degreeUnit)
 
-  let unit = "F"
   return (
     <section class="collapse">
       <input type="radio" name="forecast"/>
-      <div className="flex items-center justify-around gap-4 collapse-title text-xl px-0">
-        <span className="text-md text-gray">{day.slice(0, 3)}</span>
+      <div className="flex justify-between items-center gap-4 collapse-title text-xl px-0">
         <span className="flex items-center gap-5">
-          <span className="text-5xl inline">{ForecastTypeComponents[data.forecastType].component}</span>
-          <span className="text-gray text-md inline">{ForecastTypeComponents[data.forecastType].text}</span>
+          <span className="text-left text-md text-gray w-8 me-8">{day.slice(0, 3)}</span>
+          <span className="text-5xl inline">{ForecastTypeComponents[weathercode].component}</span>
+          <span className="text-gray text-md w-100px inline">{ForecastTypeComponents[weathercode].text}</span>
         </span>
         <span className="text-md font-bold super">
           <sup>{highTemp}{degreeUnit}</sup>
-          <span className="m-2">/</span>
-          <sub className="text-gray">{lowTemp}&deg;{unit}</sub>
+          <span className="m-1 text-gray">/</span>
+          <sub className="text-gray">{lowTemp}{degreeUnit}</sub>
         </span>
       </div>
       <div className="collapse-content text-center">
