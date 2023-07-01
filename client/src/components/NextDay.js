@@ -64,12 +64,20 @@ const NextDay = (props) => {
   let unit = "F"
   return (
     <section class="collapse">
-      <input type="radio" name="forecast" checked="checked" />
-      <div className="flex items-center justify-center gap-4 collapse-title text-xl px-0">
-        <span className="text-5xl">{ForecastTypeComponents[data.forecastType].component}</span>
-        <span className="text-md font-bold">{lowTemp}&deg;{unit} / {highTemp}&deg;{unit}</span>
+      <input type="radio" name="forecast"/>
+      <div className="flex items-center justify-around gap-4 collapse-title text-xl px-0">
+        <span className="text-md text-gray">{day.slice(0, 3)}</span>
+        <span className="flex items-center gap-5">
+          <span className="text-5xl inline">{ForecastTypeComponents[data.forecastType].component}</span>
+          <span className="text-gray text-md inline">{ForecastTypeComponents[data.forecastType].text}</span>
+        </span>
+        <span className="text-md font-bold super">
+          <sup>{highTemp}&deg;{unit}</sup>
+          <span className="m-2">/</span>
+          <sub className="text-gray">{lowTemp}&deg;{unit}</sub>
+        </span>
       </div>
-      <div className="collapse-content">
+      <div className="collapse-content text-center">
         <p>weatherStatus: {weatherForecast}</p>
       </div>
     </section>

@@ -14,6 +14,7 @@ module.exports = {
       'purple-medium': '#998BA8',
       'purple-dark': '#351A53',
       'dark': '#1E142A',
+      'gray': '#B3AEB9',
       'light': '#F5F3F6',
     },
     extend: {
