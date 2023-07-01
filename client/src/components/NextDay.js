@@ -57,9 +57,8 @@ const NextDay = (props) => {
   let [lowTemp, setLowTemp] = useState(props.lowTemp);
   let [highTemp, setHighTemp] = useState(props.highTemp);
   let [day, setDay] = useState(props.day)
-  let [weatherForecast, setWeatherForecast] = useState(props.weatherForecast)
-  let [backgroundUrl, setBackgroundUrl] = useState(props.backgroundUrl)
-  let [isExpanded, setIsExpanded] = useState(false)
+  let [weathercode, setWeathercode] = useState(props.weathercode)
+  let [degreeUnit, setDegreeUnit] = useState(props.degreeUnit)
 
   let unit = "F"
   return (
@@ -72,13 +71,13 @@ const NextDay = (props) => {
           <span className="text-gray text-md inline">{ForecastTypeComponents[data.forecastType].text}</span>
         </span>
         <span className="text-md font-bold super">
-          <sup>{highTemp}&deg;{unit}</sup>
+          <sup>{highTemp}{degreeUnit}</sup>
           <span className="m-2">/</span>
           <sub className="text-gray">{lowTemp}&deg;{unit}</sub>
         </span>
       </div>
       <div className="collapse-content text-center">
-        <p>weatherStatus: {weatherForecast}</p>
+        <p>weatherStatus: {weathercode}</p>
       </div>
     </section>
   )
