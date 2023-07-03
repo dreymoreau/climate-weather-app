@@ -1,10 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import {
-  PiCloudDuotone,
   PiCloudFogDuotone,
   PiCloudLightningDuotone,
-  PiCloudMoonDuotone,
   PiCloudRainDuotone,
   PiCloudSnowDuotone,
   PiCloudSunDuotone,
