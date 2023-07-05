@@ -53,6 +53,12 @@ const NextDay = (props) => {
   let [day, setDay] = useState(props.day)
   let [weathercode, setWeathercode] = useState(props.weathercode)
   let [degreeUnit, setDegreeUnit] = useState(props.degreeUnit)
+  let [precipitationSum, setPrecipitationSum] = useState(props.precipitationSum)
+  let [precipitationSumUnit, setPrecipitationSumUnit] = useState(props.precipitationSumUnit)
+  let [windspeedMax, setWindspeedMax] = useState(props.windspeedMax)
+  let [windspeedMaxUnit, setWindspeedMaxUnit] = useState(props.windspeedMaxUnit)
+  let [UVIndexMax, setUVIndexMax] = useState(props.UVIndexMax)
+  let [UVIndexMaxUnit, setUVIndexMaxUnit] = useState(props.UVIndexMaxUnit)
 
   return (
     <section class="collapse">
@@ -69,9 +75,11 @@ const NextDay = (props) => {
           <sub className="text-gray">{lowTemp >= 0 ? "+" : "-"}{lowTemp.toFixed(1)}{degreeUnit}</sub>
         </span>
       </div>
-      <div className="collapse-content text-center">
-        <p>weatherStatus: {weathercode}</p>
-      </div>
+      <section className="collapse-content text-center">
+        <div className="flex justify-center">Precipitation: {precipitationSum} {precipitationSumUnit}</div>
+        <div className="flex justify-center">Windspeed Max: {windspeedMax} {windspeedMaxUnit}</div>
+        <div className="flex justify-center">UV Index Max: {UVIndexMax} {UVIndexMaxUnit}</div>
+      </section>
     </section>
   )
 }
