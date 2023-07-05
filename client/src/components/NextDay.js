@@ -64,9 +64,9 @@ const NextDay = (props) => {
           <span className="text-gray text-md w-100px inline">{ForecastTypeComponents[weathercode].text}</span>
         </span>
         <span className="text-md font-bold super">
-          <sup>{highTemp}{degreeUnit}</sup>
+          <sup>{highTemp >= 0 ? "+" : "-"}{highTemp.toFixed(1)}{degreeUnit}</sup>
           <span className="m-1 text-gray">/</span>
-          <sub className="text-gray">{lowTemp}{degreeUnit}</sub>
+          <sub className="text-gray">{lowTemp >= 0 ? "+" : "-"}{lowTemp.toFixed(1)}{degreeUnit}</sub>
         </span>
       </div>
       <div className="collapse-content text-center">
