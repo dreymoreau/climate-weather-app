@@ -7,7 +7,7 @@ const connectMongo = require('connect-mongo'); // changed from Leons wersion
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
-
+const mainRoutes = require('./routes/main')
 require('dotenv').config({path: './config/.env'})
 
 // Passport config
