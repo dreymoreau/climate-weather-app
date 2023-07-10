@@ -53,6 +53,12 @@ const NextDay = (props) => {
   let [day, setDay] = useState(props.day)
   let [weathercode, setWeathercode] = useState(props.weathercode)
   let [degreeUnit, setDegreeUnit] = useState(props.degreeUnit)
+  let [precipitationSum, setPrecipitationSum] = useState(props.precipitationSum)
+  let [precipitationSumUnit, setPrecipitationSumUnit] = useState(props.precipitationSumUnit)
+  let [windspeedMax, setWindspeedMax] = useState(props.windspeedMax)
+  let [windspeedMaxUnit, setWindspeedMaxUnit] = useState(props.windspeedMaxUnit)
+  let [UVIndexMax, setUVIndexMax] = useState(props.UVIndexMax)
+  let [UVIndexMaxUnit, setUVIndexMaxUnit] = useState(props.UVIndexMaxUnit)
 
   return (
     <section class="collapse">
@@ -64,14 +70,16 @@ const NextDay = (props) => {
           <span className="text-gray text-md w-100px inline">{ForecastTypeComponents[weathercode].text}</span>
         </span>
         <span className="text-md font-bold super">
-          <sup>{highTemp}{degreeUnit}</sup>
+          <sup>{highTemp >= 0 ? "+" : "-"}{highTemp.toFixed(1)}{degreeUnit}</sup>
           <span className="m-1 text-gray">/</span>
-          <sub className="text-gray">{lowTemp}{degreeUnit}</sub>
+          <sub className="text-gray">{lowTemp >= 0 ? "+" : "-"}{lowTemp.toFixed(1)}{degreeUnit}</sub>
         </span>
       </div>
-      <div className="collapse-content text-center">
-        <p>weatherStatus: {weathercode}</p>
-      </div>
+      <section className="collapse-content text-center">
+        <div className="flex justify-center">Precipitation: {precipitationSum} {precipitationSumUnit}</div>
+        <div className="flex justify-center">Windspeed Max: {windspeedMax} {windspeedMaxUnit}</div>
+        <div className="flex justify-center">UV Index Max: {UVIndexMax} {UVIndexMaxUnit}</div>
+      </section>
     </section>
   )
 }
