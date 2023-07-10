@@ -23,7 +23,7 @@ const NextDays = () => {
     )
   }
   return (
-    <div className="container flex flex-col gap-4 max-w-md">
+    <div className="container flex flex-col font-sans gap-4 max-w-md">
       {next_days}
     </div>
   )
