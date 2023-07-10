@@ -17,7 +17,13 @@ module.exports = {
       'gray': '#B3AEB9',
       'light': '#F5F3F6',
     },
+    fontFamily: {
+      sans: ["Josefin Sans", "Arial", "sans"],
+    },
     extend: {
+      fontFamily: {
+        heading: ["Yeseva One", "Helvetica", "serif"],
+      },
       backgroundImage: {
         "rainy": "url('https://images.unsplash.com/photo-1527766833261-b09c3163a791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80')",
         "foggy": "url('https://media.discordapp.net/attachments/1113169937222074480/1121822922726723624/foggy.jpg?width=799&height=584')",
