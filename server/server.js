@@ -7,7 +7,8 @@ const connectMongo = require('connect-mongo'); // changed from Leons wersion
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
-
+const axios = require('axios');
+const apiRoutes = require('./routes/api');
 require('dotenv').config({path: './config/.env'})
 
 // Passport config
@@ -31,6 +32,7 @@ app.use(
       store: connectMongo.create({ mongoUrl: process.env.DB_STRING })
   })
 );
+app.use('./routes/api')
 
 
 // Passport middleware
