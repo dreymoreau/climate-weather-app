@@ -3,21 +3,20 @@ const app = express()
 const mongoose = require('mongoose')
 const passport = require('passport')
 const session = require('express-session')
-const connectMongo = require('connect-mongo'); // changed from Leons wersion
+const MongoStore = require('connect-mongo')
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
-const axios = require('axios');
-const apiRoutes = require('./routes/api');
+const mainRoutes = require('./routes/main')
 require('dotenv').config({path: './config/.env'})
 
 // Passport config
 
-// require('./config/passport')(passport) i commented this line since the passport is currently empty
+require('dotenv').config({path: './config/.env'})
 
 connectDB()
 
-app.set()
+app.set() // asuming it's not app.set('view engine', 'ejs'), not sure what to use for React
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -26,18 +25,25 @@ app.use(logger('dev'))
 // Sessions
 app.use(
   session({
-      secret: 'keyboard cat',
-      resave: false,
-      saveUninitialized: false,
-      store: connectMongo.create({ mongoUrl: process.env.DB_STRING })
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: process.env.DB_STRING,
+    }),
   })
 );
-app.use('./routes/api')
 
 
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
+
+
+// routers 
+
+app.use('/', mainRoutes)
+
 
 app.use(flash())
 

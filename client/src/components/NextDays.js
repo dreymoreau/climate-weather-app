@@ -13,11 +13,17 @@ const NextDays = () => {
         day={new Intl.DateTimeFormat("en-US",  { weekday: "long" }).format(new Date(forecastData.daily.time[i]))}
         weathercode={forecastData.daily.weathercode[i]}
         degreeUnit={forecastData.daily_units.apparent_temperature_max}
+        precipitationSum={forecastData.daily.precipitation_sum[i]}
+        precipitationSumUnit={forecastData.daily_units.precipitation_sum}
+        windspeedMax={forecastData.daily.windspeed_10m_max[i]}
+        windspeedMaxUnit={forecastData.daily_units.windspeed_10m_max}
+        UVIndexMax={forecastData.daily.uv_index_max[i]}
+        UVIndexMaxUnit={forecastData.daily_units.uv_index_max}
       />
     )
   }
   return (
-    <div className="container flex flex-col gap-4 max-w-md">
+    <div className="container flex flex-col font-sans gap-4 max-w-md">
       {next_days}
     </div>
   )
