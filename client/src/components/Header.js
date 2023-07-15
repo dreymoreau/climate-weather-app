@@ -1,9 +1,10 @@
 import React from 'react'
+import Login from './Login'
 
 const Header = () => {
   return (
     <div>
-        <div className="font-heading text-4xl my-4">
+        <div>
             <div>Todays Weather</div>
         </div>
     </div>

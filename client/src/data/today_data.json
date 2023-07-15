@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "currentTemp": "68",
+        "lowTemp": 50,
+        "highTemp": 78,
+        "day": "Sunday",
+        "weatherForecast": "rainy",
+        "backgroundUrl": "https://unsplash.com/photos/Bu1zj2WbjHE"
+    }
+]
+
