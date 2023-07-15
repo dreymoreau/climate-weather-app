@@ -8,6 +8,7 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
+const apiRoutes = require('./routes/api')
 require('dotenv').config({path: './config/.env'})
 
 // Passport config
@@ -25,14 +26,14 @@ app.use(logger('dev'))
 // Sessions
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET || 'string',
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
       mongoUrl: process.env.DB_STRING,
     }),
   })
-)
+);
 
 
 // Passport middleware
@@ -43,6 +44,7 @@ app.use(passport.session())
 // routers 
 
 app.use('/', mainRoutes)
+app.use('/', apiRoutes)
 
 
 app.use(flash())
