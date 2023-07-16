@@ -1,17 +1,20 @@
 import './App.css';
-import Header from './components/Header'
-import Today from './components/Today'
-import NextDays from './components/NextDays'
-import Footer from './components/Footer'
+import Home from './pages/Home'
+import ErrorPage from "./pages/ErrorPage"
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  }
+]);
+
 
 function App() {
   return (
-    <div className="App bg-dark flex flex-col items-center">
-      <Header />
-      <Today />
-      <NextDays />
-      <Footer />
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
