@@ -5,11 +5,3 @@ const apiController = require('../controllers/api')
 router.get('/api/data', apiController.getForecast)
 
 module.exports = router
-
-
-
-
-
-
-
-

@@ -3,7 +3,7 @@ const REDIRECT_ROUTES = {
   main: '/todos'
 };
 
-
+// TODO remove redirects (return errors message instead for frontend consumption)
 module.exports = {
   ensureAuth: function (req, res, next) {
     if (req.isAuthenticated()) {
