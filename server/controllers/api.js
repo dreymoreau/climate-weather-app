@@ -1,4 +1,3 @@
-
 const axios = require("axios")
  async function getForecast(req, res) {
     try {
