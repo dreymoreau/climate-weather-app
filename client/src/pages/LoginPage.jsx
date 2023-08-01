@@ -1,12 +1,57 @@
+import { useState } from "react";
 import { useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {
   const error = useRouteError();
   console.error(error);
 
+    const [registerEmail, setRegisterEmail] = useState("")
+    const [registerPassword, setRegisterPassword] = useState("")
+    const [loginEmail, setLoginEmail] = useState("")
+    const [loginPassword, setLoginPassword] = useState("")
+
+    const register = () => {
+        axios({
+            method: "post",
+            data: {
+                username: registerEmail,
+                password: registerPassword
+            },
+            withCredentials: true,
+            url : `${process.env.VITE_BACKEND_URI}/register`
+        }).then((res) => console.log(res))
+    }
+    const login = () => {
+        axios({
+            method: "post",
+            data: {
+                username: loginEmail,
+                password: loginPassword
+            },
+            withCredentials: true,
+            url : `${process.env.VITE_BACKEND_URI}/login`
+        }).then((res) => console.log(res))
+    }
+
   return (
-    <main className="min-h-screen bg-dark flex flex-col gap-8 items-center justify-center p-8 text-center text-lg">
-      <h1 className="text-8xl">LOGIN</h1>
+    <main>
+        <section>
+            <h2>Sign Up</h2>
+            <form>
+                <input placeholder="email" onChange={e => setRegisterEmail(e.target.value)}/>
+                <input placeholder="password" onChange={e => setRegisterPassword(e.target.value)}/>
+            </form>
+            <button onClick={register} type="submit">Register</button>
+        </section>
+
+        <section>
+            <h2>Login</h2>
+            <form>
+                <input placeholder="email" onChange={e => setLoginEmail(e.target.value)}/>
+                <input placeholder="password" onChange={e => setLoginPassword(e.target.value)}/>
+            </form>
+            <button onClick={login} type="submit">Login</button>
+        </section>
     </main>
   )
 }
