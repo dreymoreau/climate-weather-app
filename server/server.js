@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require("cors");
 const mongoose = require('mongoose')
 const passport = require('passport')
 const session = require('express-session')
@@ -10,6 +11,16 @@ const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 const apiRoutes = require('./routes/api')
 require('dotenv').config({path: './config/.env'})
+
+
+const corsOptions = {
+  methods: ["GET", "POST"],
+  origin: true,
+  credentials: true,
+  optionsSuccessStatus: 200,
+}
+
+app.use(cors(corsOptions))
 
 connectDB()
 
