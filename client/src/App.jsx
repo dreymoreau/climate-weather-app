@@ -13,13 +13,13 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginPage />,
-  }
+  },
 ]);
 
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <RouterProvider className="App" router={router} />
   );
 }
 

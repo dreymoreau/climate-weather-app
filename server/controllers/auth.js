@@ -25,6 +25,7 @@ const REDIRECT_ROUTES = {
   // / Handles the login form submission
 
   exports.postLogin = (req, res, next) => {
+    console.log("REQUEST", req)
 
     const validationErrors = [] // Placeholder for inputting error messages
     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
@@ -33,7 +34,7 @@ const REDIRECT_ROUTES = {
      // If there is an error, redirect back to the login page
 
     if (validationErrors.length) {
-      req.flash('errors', validationErrors)
+      // req.flash('errors', validationErrors)
       return res.redirect(REDIRECT_ROUTES.login)
     }
 
@@ -45,14 +46,14 @@ const REDIRECT_ROUTES = {
       // checks for errors
       if (err) { return next(err) }
       if (!user) {
-        req.flash('errors', info)
+        // req.flash('errors', info)
         return res.redirect(REDIRECT_ROUTES.login)
       }
          // If there are no errors, it tries to log in the user
 
       req.logIn(user, (err) => {
         if (err) { return next(err) }
-        req.flash('success', { msg: 'Success! You are logged in.' })
+        // req.flash('success', { msg: 'Success! You are logged in.' })
         res.redirect(req.session.returnTo || REDIRECT_ROUTES.main)
       })
     })(req, res, next)
