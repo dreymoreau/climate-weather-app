@@ -9,29 +9,6 @@ export default function LoginPage() {
     password: "",
   })
 
-  // const register = () => {
-  //   axios({
-  //     method: "post",
-  //     data: {
-  //       username: registerEmail,
-  //       password: registerPassword,
-  //     },
-  //     withCredentials: true,
-  //     url: `${import.meta.env.VITE_BACKEND_URI}/register`,
-  //   }).then((res) => console.log(res));
-  // };
-  // const login = () => {
-  //   axios({
-  //     method: "post",
-  //     data: {
-  //       username: loginEmail,
-  //       password: loginPassword,
-  //     },
-  //     withCredentials: true,
-  //     url: `${import.meta.env.VITE_BACKEND_URI}/login`,
-  //   }).then((res) => console.log(res));
-  // };
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -39,17 +16,16 @@ export default function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios({
-      method: "post",
-      url: `${import.meta.env.VITE_BACKEND_URI}/login`,
-      data: formData,
-      withCredentials: true,
-    }).then((res) => console.log(res));
+    axios.post(`${import.meta.env.VITE_BACKEND_URI}/login`, formData, { withCredentials: true })
+      .then((res) => {
+        console.log(res?.data)
+
+      });
   }
 
   return (
-    // <!-- Left column container-->
     <main className="flex justify-center bg-dark">
+      {/* Form container */}
       <div className="bg-dark px-4 md:p-6 md:w-8/12 lg:w-6/12 xl:w-5/12">
         {/* <!--Logo--> */}
         <div className="text-center">
@@ -58,6 +34,7 @@ export default function LoginPage() {
           </h4>
         </div>
 
+        {/* Login form */}
         <form onSubmit={handleSubmit}>
           <p className="mb-4">Please login to your account</p>
           {/* <!--Email input--> */}
